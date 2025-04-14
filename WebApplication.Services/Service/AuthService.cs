@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -13,8 +15,12 @@ using WebApplication.Services.Models.Auth;
 
 namespace WebApplication.Services.Service
 {
-    public class AuthService(IUserRepository _userRepo, ILogger<AuthService> _logger, AuthenticationSetting _auth, ITokenRepository _tokenRepo) : IAuthService
+    public class AuthService(IUserRepository _userRepo, ILogger<AuthService> _logger, AuthenticationSetting _auth, ITokenRepository _tokenRepo, IHttpContextAccessor _httpContext) : IAuthService
     {
+        public string GetTokenFromRequest()
+        {
+            return (_httpContext.HttpContext.Request.Headers["Authorization"]).Single().Split().Last() ?? string.Empty;
+        }
         public async Task<string> Login(LoginModel param)
         {
             try
@@ -35,7 +41,7 @@ namespace WebApplication.Services.Service
                     new("UserId", user.Id)
                 };
 
-                var loginExpiration = DateTime.Now.AddMinutes(30);
+                var loginExpiration = DateTime.Now.AddDays(2);
 
                 var authSigninKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_auth.SecretKey));
 
@@ -59,6 +65,28 @@ namespace WebApplication.Services.Service
                     );
 
                 return tokenStr;
+
+            } catch (Exception ex)
+            {
+                _logger.LogError($"Message: {ex.Message}" +
+                    $"StackTrace: {ex.StackTrace}"
+                    );
+
+                throw;
+            }
+        }
+
+        public async Task<string> Logout()
+        {
+            try
+            {
+                var token = GetTokenFromRequest();
+
+                var readToken = new JwtSecurityTokenHandler().ReadJwtToken(token);
+                var email = readToken.Claims.Where(x => x.Type == ClaimTypes.Email).Select(x => x.Value).FirstOrDefault();
+                await _tokenRepo.DeleteValidToken(email ,token);
+
+                return "Logout Success";
 
             } catch (Exception ex)
             {

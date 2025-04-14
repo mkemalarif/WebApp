@@ -1108,7 +1108,9 @@
       },
       "WebApplication.Services/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.15"
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.15",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
+          "WebApplication.Repositories": "1.0.0"
         },
         "runtime": {
           "WebApplication.Services.dll": {}

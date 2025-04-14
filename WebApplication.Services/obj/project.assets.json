@@ -2322,6 +2322,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.15",
+      "Microsoft.AspNetCore.Http.Abstractions >= 2.3.0",
       "WebApplication.Repositories >= 1.0.0"
     ]
   },
@@ -2382,6 +2383,10 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[8.0.15, )"
+          },
+          "Microsoft.AspNetCore.Http.Abstractions": {
+            "target": "Package",
+            "version": "[2.3.0, )"
           }
         },
         "imports": [

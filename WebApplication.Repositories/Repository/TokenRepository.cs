@@ -27,7 +27,7 @@ namespace WebApplication.Repositories.Repository
 
         public async Task InsertValidToken(Token param)
         {
-            _db.Tokens.Update(param);
+            _db.Tokens.Add(param);
 
             await _db.SaveChangesAsync();
         }
@@ -42,6 +42,18 @@ namespace WebApplication.Repositories.Repository
             _db.Tokens.Remove(validToken);
 
             await _db.SaveChangesAsync();
+        }
+
+        public async Task<string> GetEmailByToken(string token)
+        {
+            Token validToken = await _db.Tokens
+                .AsNoTracking()
+                .SingleOrDefaultAsync(x => x.ValidToken == token);
+
+            if (validToken == null)
+                return null;
+
+            return validToken.Email;
         }
     }
 }

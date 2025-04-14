@@ -11,9 +11,7 @@ namespace WebApplication.Repositories.Repository
     public class UserRepository(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, AppDbContext _db) : IUserRepository
     {
         public Task<IdentityResult> CreateAsync(IdentityUser user, string password) => userManager.CreateAsync(user, password);
-        public Task<IdentityUser> FindByIdAsync(string id) => userManager.FindByIdAsync(id);
         public Task<IdentityUser> FindByEmailAsync(string email) => userManager.FindByEmailAsync(email);
-        public Task<IList<string>> GetRolesAsync(IdentityUser user) => userManager.GetRolesAsync(user);
         public Task SignInAsync(IdentityUser user, bool IsPersistent, string authenticationMethod) => signInManager.SignInAsync(user, IsPersistent, authenticationMethod);
     }
 }

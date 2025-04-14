@@ -9,9 +9,9 @@ using WebApplication.Services;
 using WebApplication.Services.Models.Auth;
 
 var builder = Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(args);
-//var authenticationSetting = builder.Configuration.GetSection("AuthenticationSettings").Get<AuthenticationSetting>();
+var authenticationSetting = builder.Configuration.GetSection("AuthenticationSettings").Get<AuthenticationSetting>();
 
-//builder.Services.AddSingleton(authenticationSetting);
+builder.Services.AddSingleton(authenticationSetting);
 
 // Add services to the container.
 builder.Services.AddHttpContextAccessor();
@@ -48,7 +48,6 @@ builder.Services.AddAuthentication(options =>
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
 })
-//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(options =>
 {
     options.SaveToken = true;
@@ -58,9 +57,9 @@ builder.Services.AddAuthentication(options =>
         ValidateLifetime = true,
         ValidateIssuer = true,
         ValidateAudience = true,
-        //ValidIssuer = authenticationSetting.ValidIssuer,
-        //ValidAudience = authenticationSetting.ValidAudience,
-        //IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authenticationSetting.SecretKey))
+        ValidIssuer = authenticationSetting.ValidIssuer,
+        ValidAudience = authenticationSetting.ValidAudience,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authenticationSetting.SecretKey))
     };
 });
 

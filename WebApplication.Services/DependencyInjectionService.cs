@@ -14,6 +14,7 @@ namespace WebApplication.Services
         public static IServiceCollection AddDependencyInjectionService(this IServiceCollection services)
         {
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IUserService, UserService>();
 
             return services;
         }

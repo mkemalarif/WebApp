@@ -11,3 +11,6 @@ F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\Web
 F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\refint\WebApplication.Services.dll
 F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\WebApplication.Services.pdb
 F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\ref\WebApplication.Services.dll
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\bin\Debug\net8.0\WebApplication.Repositories.dll
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\bin\Debug\net8.0\WebApplication.Repositories.pdb
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\WebAppli.D610961E.Up2Date
