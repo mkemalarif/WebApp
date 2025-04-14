@@ -15,6 +15,7 @@ namespace WebApplication.Repositories
         {
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<ITokenRepository, TokenRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
 
             return services;
         }
