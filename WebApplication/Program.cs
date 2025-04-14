@@ -15,6 +15,7 @@ builder.Services.AddSingleton(authenticationSetting);
 
 // Add services to the container.
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddCors();
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
@@ -67,6 +68,14 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(o => o.AddPolicy("AllowAllOrigin", builder =>
+{
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader()
+           .WithExposedHeaders("Content-Disposition"); // to access fileName from server
+}));
+
 
 var app = builder.Build();
 
@@ -76,6 +85,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowAllOrigin");
 
 app.UseHttpsRedirection();
 
