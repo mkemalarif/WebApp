@@ -1,26 +1,46 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using System.Text;
 using WebApplication.Repositories;
+using WebApplication.Services;
 using WebApplication.Services.Models.Auth;
 
 var builder = Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(args);
-var authenticationSetting = builder.Configuration.GetSection("AuthenticationSettings").Get<AuthenticationSetting>();
+//var authenticationSetting = builder.Configuration.GetSection("AuthenticationSettings").Get<AuthenticationSetting>();
 
-builder.Services.AddSingleton(authenticationSetting);
+//builder.Services.AddSingleton(authenticationSetting);
 
 // Add services to the container.
+builder.Services.AddHttpContextAccessor();
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString("conn"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("conn") ?? throw new InvalidOperationException("Conn not found"));
 });
 
 builder.Logging.Services.AddLogging(builder =>
 {
     builder.AddSerilog();
 });
+
+builder.Services.AddDependencyInjectionRepository();
+builder.Services.AddDependencyInjectionService();
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+{
+    options.SignIn.RequireConfirmedEmail = false;
+    options.SignIn.RequireConfirmedPhoneNumber = false;
+    options.Password.RequireDigit = true;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 0;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = true;
+})
+.AddEntityFrameworkStores<AppDbContext>();
 
 builder.Services.AddAuthentication(options =>
 {
@@ -38,9 +58,9 @@ builder.Services.AddAuthentication(options =>
         ValidateLifetime = true,
         ValidateIssuer = true,
         ValidateAudience = true,
-        ValidIssuer = authenticationSetting.ValidIssuer,
-        ValidAudience = authenticationSetting.ValidAudience,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authenticationSetting.SecretKey))
+        //ValidIssuer = authenticationSetting.ValidIssuer,
+        //ValidAudience = authenticationSetting.ValidAudience,
+        //IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(authenticationSetting.SecretKey))
     };
 });
 

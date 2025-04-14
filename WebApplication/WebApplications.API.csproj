@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebApplication.Repositories\WebApplication.Repositories.csproj" />
+    <ProjectReference Include="..\WebApplication.Services\WebApplication.Services.csproj" />
   </ItemGroup>
 
 </Project>

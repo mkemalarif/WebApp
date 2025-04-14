@@ -117,7 +117,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\workout\\C#\\WebApp\\WebApplication\\WebApplication.Repositories\\WebApplication.Repositories.csproj": {
+                "projectPath": "F:\\workout\\C#\\WebApp\\WebApplication\\WebApplication.Repositories\\WebApplication.Repositories.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
