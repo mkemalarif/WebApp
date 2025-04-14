@@ -1,0 +1,8 @@
+F:\workout\C#\WebApp\WebApplication\WebApplication\obj\Debug\net8.0\WebApplication.csproj.AssemblyReference.cache
+F:\workout\C#\WebApp\WebApplication\WebApplication\obj\Debug\net8.0\WebApplication.GeneratedMSBuildEditorConfig.editorconfig
+F:\workout\C#\WebApp\WebApplication\WebApplication\obj\Debug\net8.0\WebApplication.AssemblyInfoInputs.cache
+F:\workout\C#\WebApp\WebApplication\WebApplication\obj\Debug\net8.0\WebApplication.AssemblyInfo.cs
+F:\workout\C#\WebApp\WebApplication\WebApplication\obj\Debug\net8.0\WebApplication.csproj.CoreCompileInputs.cache
+F:\workout\C#\WebApp\WebApplication\WebApplication\obj\Debug\net8.0\WebApplication.MvcApplicationPartsAssemblyInfo.cs
+F:\workout\C#\WebApp\WebApplication\WebApplication\obj\Debug\net8.0\WebApplication.MvcApplicationPartsAssemblyInfo.cache
+F:\workout\C#\WebApp\WebApplication\WebApplication\obj\Debug\net8.0\WebApplication.sourcelink.json

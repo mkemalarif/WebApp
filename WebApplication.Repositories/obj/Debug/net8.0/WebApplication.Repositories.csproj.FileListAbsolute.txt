@@ -1,0 +1,15 @@
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\bin\Debug\net8.0\WebApplication.Repositories.deps.json
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\bin\Debug\net8.0\WebApplication.Repositories.runtimeconfig.json
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\bin\Debug\net8.0\WebApplication.Repositories.dll
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\bin\Debug\net8.0\WebApplication.Repositories.pdb
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\obj\Debug\net8.0\WebApplication.Repositories.csproj.AssemblyReference.cache
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\obj\Debug\net8.0\WebApplication.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\obj\Debug\net8.0\WebApplication.Repositories.AssemblyInfoInputs.cache
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\obj\Debug\net8.0\WebApplication.Repositories.AssemblyInfo.cs
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\obj\Debug\net8.0\WebApplication.Repositories.csproj.CoreCompileInputs.cache
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\obj\Debug\net8.0\WebApplication.Repositories.sourcelink.json
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\obj\Debug\net8.0\WebApplication.Repositories.dll
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\obj\Debug\net8.0\refint\WebApplication.Repositories.dll
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\obj\Debug\net8.0\WebApplication.Repositories.pdb
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\obj\Debug\net8.0\WebApplication.Repositories.genruntimeconfig.cache
+F:\workout\C#\WebApp\WebApplication\WebApplication.Repositories\obj\Debug\net8.0\ref\WebApplication.Repositories.dll

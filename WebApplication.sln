@@ -3,7 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{67E4DF55-83CC-4712-BBD7-F84193AC8AAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplications.API", "WebApplication\WebApplications.API.csproj", "{67E4DF55-83CC-4712-BBD7-F84193AC8AAA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BC6E830D-977B-4AA3-8B5C-D399AF791F01} = {BC6E830D-977B-4AA3-8B5C-D399AF791F01}
+		{CF5B54EF-6287-472B-BAEA-811F4637DA1B} = {CF5B54EF-6287-472B-BAEA-811F4637DA1B}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication.Services", "WebApplication.Services\WebApplication.Services.csproj", "{BC6E830D-977B-4AA3-8B5C-D399AF791F01}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF5B54EF-6287-472B-BAEA-811F4637DA1B} = {CF5B54EF-6287-472B-BAEA-811F4637DA1B}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication.Repositories", "WebApplication.Repositories\WebApplication.Repositories.csproj", "{CF5B54EF-6287-472B-BAEA-811F4637DA1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +26,14 @@ Global
 		{67E4DF55-83CC-4712-BBD7-F84193AC8AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67E4DF55-83CC-4712-BBD7-F84193AC8AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67E4DF55-83CC-4712-BBD7-F84193AC8AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC6E830D-977B-4AA3-8B5C-D399AF791F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC6E830D-977B-4AA3-8B5C-D399AF791F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC6E830D-977B-4AA3-8B5C-D399AF791F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC6E830D-977B-4AA3-8B5C-D399AF791F01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF5B54EF-6287-472B-BAEA-811F4637DA1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF5B54EF-6287-472B-BAEA-811F4637DA1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF5B54EF-6287-472B-BAEA-811F4637DA1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF5B54EF-6287-472B-BAEA-811F4637DA1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

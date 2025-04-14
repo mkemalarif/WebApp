@@ -1,0 +1,13 @@
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\bin\Debug\net8.0\WebApplication.Services.deps.json
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\bin\Debug\net8.0\WebApplication.Services.dll
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\bin\Debug\net8.0\WebApplication.Services.pdb
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\WebApplication.Services.csproj.AssemblyReference.cache
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\WebApplication.Services.GeneratedMSBuildEditorConfig.editorconfig
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\WebApplication.Services.AssemblyInfoInputs.cache
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\WebApplication.Services.AssemblyInfo.cs
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\WebApplication.Services.csproj.CoreCompileInputs.cache
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\WebApplication.Services.sourcelink.json
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\WebApplication.Services.dll
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\refint\WebApplication.Services.dll
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\WebApplication.Services.pdb
+F:\workout\C#\WebApp\WebApplication\WebApplication.Services\obj\Debug\net8.0\ref\WebApplication.Services.dll
