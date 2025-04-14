@@ -12,7 +12,7 @@ const ls = {
         }
     },
 
-    set: (key: string, value: any) => {
+    set: (key: string, value?: any) => {
         try {
             const serializedValue = JSON.stringify(value);
             localStorage.setItem(key, serializedValue);
