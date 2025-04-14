@@ -7,7 +7,7 @@ namespace WebApplications.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class AuthController(IAuthService _authService, IUserService _userService) : Controller
+    public class AuthController(IAuthService _authService, IUserService _userService) : ControllerBase
     {
         [Authorize]
         [HttpGet("Test")]
